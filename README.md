@@ -1,4 +1,5 @@
 pytorch  anaconda
+
 深度学习deep learing
 
 个人学习用，视频课程https://www.bilibili.com/video/BV1Y7411d7Ys?share_source=copy_web
