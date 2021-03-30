@@ -1,3 +1,7 @@
+import os
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
+#可能会报错OMP: Error #15:
+# 若报错则加入上面两行
 import torch.nn.functional as F
 import torch
 import numpy as np
