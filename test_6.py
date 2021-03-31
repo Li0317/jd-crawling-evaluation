@@ -13,7 +13,7 @@ y_data = torch.Tensor([[0] , [0] , [1]])
 class LogisticRegressionModel(torch.nn.Module):         #逻辑斯蒂回归模块
     def __init__(self):
         super(LogisticRegressionModel, self).__init__()
-        self.linear = torch.nn.Linear(1,1)
+        self.linear = torch.nn.Linear(1,1)      #此处linear函数在test_5中有详细解释
 
     def forward(self , x):
         y_pred = F.sigmoid(self.linear(x))      #F.sigmoid为σ(x) = 1/(1+ｅ^(-x))，其值在[0,1]，为饱和函数
