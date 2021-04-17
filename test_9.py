@@ -68,8 +68,8 @@ def test():
         for data in test_loader:
             images , labels = data
             outputs = model(images)
-            _ , predicted = torch.max(outputs.data , dim=1) #dim参数表示维度，这里为1即代表沿着维度1找max
-                                                            #torch.max返回两个值(每一行最大值，最大值下标)
+            _ , predicted = torch.max(outputs.data , dim=1) #dim参数表示维度，这里为1即代表沿着维度1(行)找max
+                                                            #torch.max返回两个值(最大值，最大值下标)
             total += labels.size(0) #labels为一个N*1的矩阵,labels.size为一个元组，取第0个元素即为N
             correct += (predicted == labels).sum().item()
     print("Accuracy on test set: %d %%" % (100 * correct / total))
